@@ -9,10 +9,10 @@ namespace Maxima.API.Controllers{
     [Route("api/[controller]")]
     [ApiController]
     
-    public class ClienteCotroller : ControllerBase
+    public class ClienteController : ControllerBase
     {
         private readonly IMaximaRepository _repo;
-        public ClienteCotroller(IMaximaRepository repo){
+        public ClienteController(IMaximaRepository repo){
             _repo = repo;
         }
 

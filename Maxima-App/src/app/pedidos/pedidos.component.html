@@ -1,0 +1,34 @@
+<form class="from-inline">
+  <h3>Consulta pedido</h3>
+  <div class="form-group mb-2"></div>
+</form>
+<div class="my-3 p-3 bg-white rounded shadow-sm">
+  <table class="table table-striped">
+    <thead class="thead-ligth">
+      <h4>Pedidos</h4>
+      <tr>
+        <th>#</th>
+        <th>Valor total</th>
+        <th>Quant. de itens</th>
+        <th>Valor do frete</th>
+      </tr>
+    </thead>
+    <tbody *ngIf="pedidos && pedidos.length">
+      <tr *ngFor="let pedido of pedidos">
+        <td>{{pedido.pedidoId}}</td>
+        <td>{{pedido.valorTotal |currency:"R$ "}}</td>
+        <td>{{pedido.qtdeItem}}</td>
+        <td>{{pedido.valorFrete |currency:"R$ "}}</td>
+      </tr>
+    </tbody>
+    <footer *ngIf="!pedidos && pedidos.length">
+      <tr>
+        <td colspan="7" class="text-center">
+          <h3>
+            Nenhum pedido encontrado.
+          </h3>
+        </td>
+      </tr>
+    </footer>
+  </table>
+</div>
