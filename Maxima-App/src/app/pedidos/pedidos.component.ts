@@ -8,7 +8,7 @@ import { PedidoService } from '../_services/pedido.service';
 })
 export class PedidosComponent implements OnInit {
 
-  pedidos: any = [];
+  public pedidos: any = [];
 
   constructor(private pedidoService: PedidoService) { }
 

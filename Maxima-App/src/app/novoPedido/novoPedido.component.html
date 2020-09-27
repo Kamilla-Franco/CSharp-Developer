@@ -1,8 +1,60 @@
-<p>
-  Novo Pedido#
-</p>
-<div id="divCliente" class="my-3 p-3 bg-white rounded shadow-sm">
-  <img src="icone-cliente.png" id="imgCliente" alt="Cliente">
-  <h6>Cliente</h6>
-  <input type="text" id="txtCliente" placeholder="Nome">
+<div class="my-3 p-3 bg-white rounded shadow-sm">
+  <h4><img src="../../assets/icones/icone-cliente.png" alt="" [style.width.PX]= 15 [style.height.PX]= 20> Cliente</h4>
+  <div class="form-inline">
+    <div class="pesquisa">
+      <input type="search" size="80" class="form-control ds-input" id="cliente"
+      placeholder="Informe um cliente*"  data-docs-version="4.1"
+      spellcheck="false" role="combobox" aria-autocomplete="list"
+      aria-expanded="false" aria-owns="algolia-autocomplete-listbox-0" dir="auto"
+      style="position: relative; vertical-align: top;"
+      [(ngModel)]="filtroLista">
+    </div>
+  </div>
 </div>
+<div class="my-3 p-3 bg-white rounded shadow-sm"
+[style.width.px]=1110
+[style.height.px]=450 >
+<div class="form-inline">
+  <h4><img src="../../assets/icones/icone-carrinho.png" alt=""
+    [style.width.PX]= 15
+    [style.height.PX]= 20
+    > Carrinho</h4>
+  </div>
+  <div class="form-inline">
+    <div class="form-group mb-3">
+      <input type="search" size="70" class="form-control ds-input" id="produto"
+      placeholder="Informe um produto" onkeydown="filtroLista"/>
+    </div>
+  </div>
+  <br>
+  <h3 style="text-align: center; color: rgba(97, 90, 90, 0.644);"><img src="../../assets/icones/imagem-carrinho-empty-state.png" alt=""
+    [style.width.PX]= 200
+    [style.height.PX]= 200>
+    <br>Carrinho vazio</h3> <h5 style="text-align: center; color: rgba(97, 90, 90, 0.644);">Nenhum produto adicionado</h5>
+
+  </div>
+  <div class="my-3 p-3 bg-white rounded shadow-sm"
+  [style.width.px]=1110
+  [style.height.px]=200
+  >
+  <h4><img src="../../assets/icones/icone-total.png" alt=""
+    [style.width.PX]= 15
+    [style.height.PX]= 20
+    > Total</h4>
+
+
+    <div class="form-group">
+      <div style="text-align: right;" >
+        <button class="btn btn-group-lg btn-success " style="width: 50%; ">
+          Finalizar pedido
+        </button>
+      </div>
+      <br>
+      <div style="text-align: right;">
+        <button class="btn btn-group-lg btn-danger" style="width: 50%;">
+          Limpar carrinho
+        </button>
+      </div>
+    </div>
+
+  </div>

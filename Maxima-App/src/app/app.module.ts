@@ -2,28 +2,30 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
-
 import{BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 import { AppComponent } from './app.component';
 import { PedidosComponent } from './pedidos/pedidos.component';
 import { NavComponent } from './nav/nav.component';
 import { NovoPedidoComponent } from './novoPedido/novoPedido.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
     AppComponent,
+    NavComponent,
       PedidosComponent,
-      NavComponent,
       NovoPedidoComponent
    ],
   imports: [
     BrowserModule,
     BsDropdownModule.forRoot(),
-    HttpClientModule,    
+    HttpClientModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

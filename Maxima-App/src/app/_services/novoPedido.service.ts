@@ -8,16 +8,16 @@ import { Produto } from '../_models/Produto';
   providedIn: 'root'
 })
 export class NovoPedidoService {
-  clienteURL:'http://localhost:5000/api/cliente';
-  produtoURL:'http://localhost:5000/api/produto';
+  clienteURL: 'http://localhost:5000/api/cliente';
+  produtoURL: 'http://localhost:5000/api/produto';
 
   constructor(private http: HttpClient) {}
 
-  getCliente():Observable<Cliente[]>{
+  getCliente(): Observable<Cliente[]>{
     return this.http.get<Cliente[]>(this.clienteURL);
 
   }
-  getProduto():Observable<Produto[]>{
+  getProduto(): Observable<Produto[]>{
     return this.http.get<Produto[]>(this.produtoURL);
 
   }
